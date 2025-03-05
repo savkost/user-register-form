@@ -1,0 +1,21 @@
+{
+  "start_page": {
+    "left_side": {
+      "title_part1": "Welcome to ",
+      "title_part2": "Our",
+      "title_part3": "App!",
+      "subtitle": "Please register in order to stay connected with our latest news, surprises and gifts."
+    },
+    "right_side": {
+      "your_information": "Your information",
+      "full_name": "Fullname",
+      "full_name_placeholder": "What is your name?",
+      "email": "Email",
+      "phone_number": "Phone number",
+      "search_number": "Search",
+      "register_btn": "Register",
+      "already_registered": "Already registered?",
+      "sign_in": "Sign in"
+    }
+  }
+}

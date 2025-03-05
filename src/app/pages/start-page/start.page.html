@@ -1,0 +1,24 @@
+<ion-content>
+
+  <!-- BASIC GRID -->
+  <ion-grid class="basicGridHome" [ngClass]="screenWidth < 1300? 'largerWidth' : ''">
+    <ion-row>
+      <ion-grid class="masterWelcomeGrid">
+
+        <!-- GENERAL ROW -->
+        <ion-row>
+
+          <!-- LEFT COLUMN -->
+          <ion-col size="5" *ngIf="screenWidth > 1000">
+            <app-left-side></app-left-side>
+          </ion-col>
+
+          <!-- RIGHT COLUMN -->
+          <ion-col [size]="screenWidth > 1000? 7 : 12">
+            <app-right-side></app-right-side>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-grid class="ion-no-padding">
+
+  <!-- TITLE -->
+  <ion-row class="titleRow" *ngIf="presentTitle">
+    <ion-label class="inputTitle">{{titleOfInput}}</ion-label>
+  </ion-row>
+
+  <!-- INPUT -->
+  <ion-row class="inputRow">
+
+    <!-- NAME, EMAIL ICONS -->
+    <ion-icon class="emailIcon" *ngIf="helper.checkUndefinedNull(isEmailInput) && isEmailInput" src="assets/images/email/mail.svg"></ion-icon>
+    <ion-icon class="emailIcon" *ngIf="!helper.checkUndefinedNull(isEmailInput)" src="assets/images/user/id-cards.svg"></ion-icon>
+
+    <!-- REGULAR INPUT -->
+    <ion-input *ngIf="!helper.checkUndefinedNull(isEmailInput)" [(ngModel)]="initialContents" [placeholder]="placeholderInput"
+               (ionInput)="emitInputContent()" [readonly]="readOnlyInput" class="mainInput" [type]="'text'" (keyup.enter)="emitEnterPressed()">
+    </ion-input>
+
+    <!-- EMAIL INPUT AND PATTERN CHECK -->
+    <ion-input type="text" *ngIf="helper.checkUndefinedNull(isEmailInput) && isEmailInput" [(ngModel)]="initialContents" [placeholder]="placeholderInput" [ngClass]="checkEmailPattern()? 'redBottomBorder' : ''"
+               (ionInput)="emitInputContent()" [readonly]="readOnlyInput" class="mainInput" (keyup.enter)="emitEnterPressed()">
+    </ion-input>
+  </ion-row>
+</ion-grid>

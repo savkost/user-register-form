@@ -1,0 +1,38 @@
+.titleRow {
+  background: transparent;
+  margin-bottom: 5px;
+}
+
+.inputTitle {
+  font-size: 14px;
+  color: var(--black-text-color);
+}
+
+.inputRow {
+  background: var(--white-app-color);
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  border: 3px solid var(--light-blue-basic);
+}
+
+.mainInput {
+  font-size: 16px;
+  color: var(--black-text-color);
+  caret-color: var(--light-blue-basic-color);
+  background: var(--white-app-color);
+  margin: 0 10px;
+  --highlight-color: transparent !important;
+  width: 70%;
+  font-weight: bold;
+}
+
+.emailIcon {
+  font-size: 25px;
+  margin-left: 10px;
+  color: var(--purple-basic);
+}
+
+.redBottomBorder {
+  border-bottom: 3px solid var(--smooth-red-color);
+}

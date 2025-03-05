@@ -1,0 +1,48 @@
+.userInfoGrid {
+  border-radius: 12px;
+  padding: 10px;
+  background: var(--white-app-color);
+  margin-top: 10px;
+}
+
+.dataSectionRow {
+  padding: 10px;
+  width: 100%;
+  background: var(--white-app-color);
+  align-items: center;
+}
+
+.titleRow {
+  background: transparent;
+  margin-bottom: 5px;
+}
+
+.inputTitle {
+  font-size: 14px;
+  color: var(--black-text-color);
+}
+
+.paddingRowButton {
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerButton {
+  --background: var(--light-blue-basic-color);
+  --border-radius: 12px;
+  --background-activated: var(--light-blue-basic-color);
+  --background-focused: var(--light-blue-basic-color);
+  --box-shadow: none;
+  height: 50px;
+  width: 50%;
+}
+
+.buttonLabel {
+  color: var(--white-app-color);
+  font-size: 20px;
+  text-align: center;
+  text-transform: none !important;
+}

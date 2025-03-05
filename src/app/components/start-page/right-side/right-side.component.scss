@@ -1,0 +1,26 @@
+.rightSideMasterGrid {
+  padding: 15px;
+  max-width: 700px;
+}
+
+.labelTitleWelcome {
+  font-size: 35px;
+  color: var(--black-text-color);
+}
+
+.labelSubtitleWelcome {
+  font-size: 18px;
+  color: var(--grey-text-color);
+}
+
+@media screen and (max-width: 800px) {
+  .labelTitleWelcome {
+    font-size: 25px;
+    color: var(--black-text-color);
+  }
+
+  .labelSubtitleWelcome {
+    font-size: 16px;
+    color: var(--grey-text-color);
+  }
+}

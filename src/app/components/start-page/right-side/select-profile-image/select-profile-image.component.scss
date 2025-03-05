@@ -1,0 +1,47 @@
+.mainUserSelectImageGrid {
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 50%;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.imageSelectorRow {
+  background: transparent;
+  width: 100%;
+}
+
+.previewSelectedImageProfile {
+  width: 70%;
+}
+
+.imageSelectorDivProper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: #0000003d 0 3px 8px;
+  border-radius: 12px;
+  background: var(--light-background-color);
+  border: 3px solid var(--white-app-color);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+
+.imageSelectorDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  margin: auto;
+}
+
+input[type='file']{
+  visibility: hidden;
+  display: none;
+}
+
+.imageSelectorIconProfile {
+  font-size: 25px;
+}

@@ -1,0 +1,26 @@
+<ion-grid class="rightSideMasterGrid">
+
+  <!-- SHOW APP ICON, TITLE, SUBTITLE IF LOW SCREEN WIDTH -->
+  <ion-row class="width100" *ngIf="screenWidth <= 1000">
+    <ion-col>
+      <ion-row class="width100">
+        <ion-label class="labelTitleWelcome">{{'start_page.left_side.title_part1' | translate}}<span class="blueLabel">{{'start_page.left_side.title_part2' | translate}}</span>{{'start_page.left_side.title_part3' | translate}}</ion-label>
+      </ion-row>
+      <ion-row class="width100 marginTop5px"><ion-label class="labelSubtitleWelcome">{{'start_page.left_side.subtitle' | translate}}</ion-label></ion-row>
+    </ion-col>
+  </ion-row>
+
+  <!-- TITLE -->
+  <ion-row class="width100" [ngClass]="screenWidth <= 1000? 'marginTop20px' : ''">
+    <ion-col>
+      <ion-row class="width100"><ion-label class="greySubTitleLabel boldText">{{'start_page.right_side.your_information' | translate}}</ion-label></ion-row>
+    </ion-col>
+  </ion-row>
+
+  <!-- WHITE BOX USER INFO -->
+  <app-user-info
+    (userInfoProvided)="registerUser($event)"
+    (navigateSignIn)="navSignIn($event)">
+  </app-user-info>
+
+</ion-grid>

@@ -1,0 +1,7 @@
+{
+  "name": "03-work-with-comps",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

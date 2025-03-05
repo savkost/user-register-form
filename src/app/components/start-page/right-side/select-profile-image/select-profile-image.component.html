@@ -1,0 +1,19 @@
+<ion-grid [style.background]="mainGridBackgroundColor" class="mainUserSelectImageGrid">
+
+  <!-- MAIN IMAGE SELECTOR -->
+  <ion-row class="imageSelectorRow">
+    <div class="imageSelectorDiv">
+
+      <!-- PREVIEW SELECTED IMAGE -->
+      <img [src]="selectedDefaultImage" class="previewSelectedImageProfile" (click)="openImageSelector('selectImagePickerProfile')">
+
+      <!-- IMAGE SELECTOR -->
+      <input type="file" id="selectImagePickerProfile" [multiple]="false" (change)="onImagePicked($event)" accept="image/*">
+    </div>
+
+    <!-- SELECT IMAGE DIV -->
+    <div class="imageSelectorDivProper" (click)="openImageSelector('selectImagePickerProfile')">
+      <ion-icon [src]="inputImageIconSelector" class="imageSelectorIconProfile"></ion-icon>
+    </div>
+  </ion-row>
+</ion-grid>

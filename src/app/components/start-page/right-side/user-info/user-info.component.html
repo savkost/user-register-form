@@ -1,0 +1,93 @@
+<!-- USER INFO TOTAL GRID -->
+<ion-grid class="userInfoGrid">
+
+  <!-- FORM -->
+  <form [formGroup]="createUserForm">
+
+    <!-- USER PROFILE IMAGE -->
+    <app-select-profile-image
+      [mainGridBackgroundColor]="'#ffffff'"
+      [inputImageIconSelector]="'assets/images/image-selection/image.svg'"
+      (selectedProfileImage)="handleSelectedImage($event)">
+    </app-select-profile-image>
+
+    <!-- FULL NAME -->
+    <ion-row class="dataSectionRow">
+      <ion-col>
+        <app-basic-input [initialContents]="getUserFormControlValue('fullName')"
+          [requiredInput]="true"
+          [placeholderInput]="'start_page.right_side.full_name_placeholder' | translate"
+          [titleOfInput]="'start_page.right_side.full_name' | translate"
+          (contentsInputWritter)="receiveInputContents($event, 'fullName')"
+          (emitEnterPressedEvent)="enterKeyPressed($event)">
+        </app-basic-input>
+      </ion-col>
+    </ion-row>
+
+    <!-- EMAIL -->
+    <ion-row class="dataSectionRow">
+      <ion-col>
+        <app-basic-input
+          [initialContents]="getUserFormControlValue('email')"
+          [requiredInput]="true"
+          [isEmailInput]="true"
+          [placeholderInput]="'start_page.right_side.email' | translate"
+          [titleOfInput]="'start_page.right_side.email' | translate"
+          (contentsInputWritter)="receiveInputContents($event, 'email')"
+          (emitEnterPressedEvent)="enterKeyPressed($event)">
+        </app-basic-input>
+      </ion-col>
+    </ion-row>
+
+    <!-- PHONE NUMBER -->
+    <ion-row class="dataSectionRow">
+      <ion-col>
+
+        <!-- TITLE -->
+        <ion-row class="titleRow">
+          <ion-label class="inputTitle">{{'start_page.right_side.phone_number' | translate}}</ion-label>
+        </ion-row>
+
+        <!-- SK TEL INPUT -->
+        <sk-tel-input
+          [totalBackgroundHexColor]="'#FFF'" [selectorBackgroundHexColor]="'#F0F8FF'"
+          [inputBackgroundHexColor]="'#FFF'" [borderHexColor]="'#F0F8FF'"
+          [arrowIconHexColor]="'#0E89D0'" [checkedCountryIconHexColor]="'#0E89D0'"
+          [dividerPreferredCountriesColor]="'#F0F8FF'" [dividerSearchInputCountriesColor]="'#F0F8FF'"
+          [inputContents]="getUserFormControlValue('mobile')"
+          [placeholderInput]="'start_page.right_side.phone_number' | translate"
+          [textInputHexColor]="'#212121'" [caseCodeSelectorTriggerID]="'create_user_information'"
+          [initialSelectedCountryISO]="IsoCode.Greece" [selectedCountryByPhoneCode]="getUserFormControlValue('mobilePrefix')"
+          [preferredCountriesISOList]="[IsoCode.Greece, IsoCode.France, IsoCode.Switzerland]"
+          [placeholderSearchCountriesInput]="'start_page.right_side.search_number' | translate"
+          [presentSearchBarCountries]="true"
+          (emitInputContentEvent)="handleSkTelInputContents($event)">
+        </sk-tel-input>
+
+      </ion-col>
+    </ion-row>
+
+    <!-- REGISTER BTN -->
+    <ion-row class="marginTop20px">
+      <ion-col>
+        <ion-row class="paddingRowButton marginTop10px">
+          <ion-button class="registerButton" (click)="emitProvidedData()" [disabled]="checkIfDisabledButton()">
+            <ion-label class="buttonLabel">{{'start_page.right_side.register_btn' | translate}}</ion-label>
+          </ion-button>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-grid>
+
+<!-- ALREADY REGISTERED, SIGN IN -->
+<ion-row class="width100 marginTop20px">
+  <ion-col>
+    <ion-row class="width100">
+      <ion-label class="greySubTitleLabel boldText">
+        {{'start_page.right_side.already_registered' | translate}}
+        <span class="blueLabel marginLeft5px cursorPointer" (click)="navigateToSignIn()">{{'start_page.right_side.sign_in' | translate}}</span>
+      </ion-label>
+    </ion-row>
+  </ion-col>
+</ion-row>
